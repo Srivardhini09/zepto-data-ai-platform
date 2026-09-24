@@ -1,0 +1,4 @@
+zenv/
+__pycache__/
+*.pyc
+support_assistant/chroma_db/
