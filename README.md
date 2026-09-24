@@ -30,3 +30,9 @@ zepto-data-ai-platform/
 ├── support_assistant/
 │
 └── README.md
+## Module Status
+
+- **Data Pipeline:** Scraping, cleaning, currency conversion, SQLite storage, SQL queries, and pandas validation.
+- **Analytics:** Titanic profiling, visualization, classification, regression, model evaluation, and saved pipeline.
+- **Support Assistant:** RAG-based Zepto policy retrieval exposed through a FastAPI service and Docker.
+
