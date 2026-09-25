@@ -1058,7 +1058,7 @@ print("\n" + "=" * 60)
 print("REGRESSION - PREDICT FARE")
 print("=" * 60)
 
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 # Features used to predict fare
@@ -1128,11 +1128,7 @@ regression_pipeline = Pipeline(
         ("preprocessor", reg_preprocessor),
         (
             "regressor",
-            RandomForestRegressor(
-                n_estimators=200,
-                random_state=42,
-                n_jobs=-1
-            )
+            LinearRegression()
         )
     ]
 )
@@ -1264,7 +1260,7 @@ final_classification.to_csv(
 
 final_regression = pd.DataFrame(
     [{
-        "Model": "Random Forest Regressor",
+        "Model": "Linear Regression",
         "MAE": mae,
         "RMSE": rmse,
         "R2": r2,
